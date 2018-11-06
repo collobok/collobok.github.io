@@ -1,12 +1,4 @@
-// This program reads in a text file and then counts the
-// occurrences of words in the file (ignoring case).  It then reports the
-// frequencies sorted by most frequent first.
-
-// use: java WordCount "On_Dancefloors.txt"
-
-// author: Leonid Shcherbakov
-// github: @collobok
-// Brooklyn College, CISC 3130
+package cisc3130;
 
 import java.util.*;
 import java.io.*;
@@ -17,16 +9,16 @@ public class WordsFrequencies {
       List<Map.Entry<String, Integer> > list = new LinkedList<Map.Entry<String, Integer> >(hm.entrySet());
 
       Collections.sort(list, new java.util.Comparator<Map.Entry<String, Integer> >() {
-      	public int compare(Map.Entry<String, Integer> o1,
+        public int compare(Map.Entry<String, Integer> o1,
                            Map.Entry<String, Integer> o2) {
-        	return (o2.getValue()).compareTo(o1.getValue());
+          return (o2.getValue()).compareTo(o1.getValue());
         }
       });
 
       // put data from sorted list to hashmap
       HashMap<String, Integer> temp = new LinkedHashMap<String, Integer>();
       for (Map.Entry<String, Integer> aa : list) {
-      	temp.put(aa.getKey(), aa.getValue());
+        temp.put(aa.getKey(), aa.getValue());
       }
       return temp;
     }
@@ -35,7 +27,8 @@ public class WordsFrequencies {
         // open the file
         Scanner console = new Scanner(System.in);
         //String fileName = args[0];
-        Scanner input = new Scanner(new File("C:\\Users\\LeonidAlienware\\Documents\\GitHub\\collobok.github.io\\src\\Truth.txt"));
+        //Scanner input = new Scanner(new File(fileName));
+        Scanner input = new Scanner(new File("C:\\Users\\LeonidAlienware\\Documents\\GitHub\\collobok.github.io\\maven-example\\Truth.txt"));
 
         // count occurrences
         HashMap<String, Integer> wordCounts = new HashMap<String, Integer>();
