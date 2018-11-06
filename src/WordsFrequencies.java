@@ -12,7 +12,7 @@ import java.util.*;
 import java.io.FileNotFoundException;
 import java.io.File;
 
-public class WordCount {
+public class WordsFrequencies {
     public static HashMap<String, Integer> sortByValue(HashMap<String, Integer> hm) {
 
       List<Map.Entry<String, Integer> > list = new LinkedList<Map.Entry<String, Integer> >(hm.entrySet());
@@ -32,11 +32,11 @@ public class WordCount {
       return temp;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException { 
         // open the file
         Scanner console = new Scanner(System.in);
-        String fileName = args[0];
-        Scanner input = new Scanner(new File("C:\\Users\\LeonidAlienware\\Documents\\GitHub\\collobok.github.io\\src\\output.txt"));
+        //String fileName = args[0];
+        Scanner input = new Scanner(new File("C:\\Users\\LeonidAlienware\\Documents\\GitHub\\collobok.github.io\\src\\On_Dancefloors.txt"));
 
         // count occurrences
         HashMap<String, Integer> wordCounts = new HashMap<String, Integer>();
