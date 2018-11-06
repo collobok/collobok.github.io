@@ -35,6 +35,7 @@ public class WordsFrequencies {
         // open the file
         Scanner console = new Scanner(System.in);
         //String fileName = args[0];
+        //Scanner input = new Scanner(new File(fileName));
         Scanner input = new Scanner(new File("C:\\Users\\LeonidAlienware\\Documents\\GitHub\\collobok.github.io\\src\\Truth.txt"));
 
         // count occurrences
